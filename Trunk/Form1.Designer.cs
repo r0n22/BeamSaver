@@ -28,12 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbl_WUID = new System.Windows.Forms.Label();
+            this.txt_WUid = new System.Windows.Forms.TextBox();
+            this.lbl_interval = new System.Windows.Forms.Label();
+            this.txt_Interval = new System.Windows.Forms.TextBox();
+            this.btt_startStop = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lbl_WUID
+            // 
+            this.lbl_WUID.AutoSize = true;
+            this.lbl_WUID.Location = new System.Drawing.Point(13, 11);
+            this.lbl_WUID.Name = "lbl_WUID";
+            this.lbl_WUID.Size = new System.Drawing.Size(312, 13);
+            this.lbl_WUID.TabIndex = 0;
+            this.lbl_WUID.Text = "Please enter the ID of the closest Weather Underground Station:\r\n";
+            // 
+            // txt_WUid
+            // 
+            this.txt_WUid.Location = new System.Drawing.Point(338, 8);
+            this.txt_WUid.Name = "txt_WUid";
+            this.txt_WUid.Size = new System.Drawing.Size(95, 20);
+            this.txt_WUid.TabIndex = 1;
+            // 
+            // lbl_interval
+            // 
+            this.lbl_interval.AutoSize = true;
+            this.lbl_interval.Location = new System.Drawing.Point(13, 50);
+            this.lbl_interval.Name = "lbl_interval";
+            this.lbl_interval.Size = new System.Drawing.Size(319, 13);
+            this.lbl_interval.TabIndex = 2;
+            this.lbl_interval.Text = "Please enter the Interval that you would like it to check in minutes:";
+            // 
+            // txt_Interval
+            // 
+            this.txt_Interval.Location = new System.Drawing.Point(338, 47);
+            this.txt_Interval.Name = "txt_Interval";
+            this.txt_Interval.Size = new System.Drawing.Size(95, 20);
+            this.txt_Interval.TabIndex = 3;
+            // 
+            // btt_startStop
+            // 
+            this.btt_startStop.Location = new System.Drawing.Point(338, 121);
+            this.btt_startStop.Name = "btt_startStop";
+            this.btt_startStop.Size = new System.Drawing.Size(101, 30);
+            this.btt_startStop.TabIndex = 4;
+            this.btt_startStop.Text = "Start";
+            this.btt_startStop.UseVisualStyleBackColor = true;
+            this.btt_startStop.Click += new System.EventHandler(this.btt_startStop_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(522, 163);
+            this.Controls.Add(this.btt_startStop);
+            this.Controls.Add(this.txt_Interval);
+            this.Controls.Add(this.lbl_interval);
+            this.Controls.Add(this.txt_WUid);
+            this.Controls.Add(this.lbl_WUID);
+            this.Name = "Form1";
+            this.Text = "Beam Saver";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbl_WUID;
+        private System.Windows.Forms.TextBox txt_WUid;
+        private System.Windows.Forms.Label lbl_interval;
+        private System.Windows.Forms.TextBox txt_Interval;
+        private System.Windows.Forms.Button btt_startStop;
     }
 }
 
