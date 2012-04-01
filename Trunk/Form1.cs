@@ -25,11 +25,17 @@ namespace BeamSaver
 
         private void btt_startStop_Click(object sender, EventArgs e)
         {
-            XmlDocument Return = new XmlDocument();
+    /*        XmlDocument Return = new XmlDocument();
             Return.Load("http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=" + txt_WUid.Text);
             int WindDirection = Convert.ToInt32(Return.GetElementsByTagName("wind_degrees")[0].InnerText);
             decimal WindSpeed = Convert.ToDecimal(Return.GetElementsByTagName("wind_mph")[0].InnerText);
             MessageBox.Show(string.Format("Wind Direction:{0} @ a speed of {1}", WindDirection.ToString(), WindSpeed.ToString()));
+     */
+        }
+
+        private void btt_ComPortConfig_Click(object sender, EventArgs e)
+        {
+            new ComPortConfig().Show();
         }
     }
 }

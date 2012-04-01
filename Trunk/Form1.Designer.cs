@@ -33,6 +33,9 @@
             this.lbl_interval = new System.Windows.Forms.Label();
             this.txt_Interval = new System.Windows.Forms.TextBox();
             this.btt_startStop = new System.Windows.Forms.Button();
+            this.lbl_MaxWind = new System.Windows.Forms.Label();
+            this.txt_MaxWind = new System.Windows.Forms.TextBox();
+            this.btt_ComPortConfig = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_WUID
@@ -71,17 +74,46 @@
             // 
             this.btt_startStop.Location = new System.Drawing.Point(338, 121);
             this.btt_startStop.Name = "btt_startStop";
-            this.btt_startStop.Size = new System.Drawing.Size(101, 30);
+            this.btt_startStop.Size = new System.Drawing.Size(95, 30);
             this.btt_startStop.TabIndex = 4;
             this.btt_startStop.Text = "Start";
             this.btt_startStop.UseVisualStyleBackColor = true;
             this.btt_startStop.Click += new System.EventHandler(this.btt_startStop_Click);
+            // 
+            // lbl_MaxWind
+            // 
+            this.lbl_MaxWind.AutoSize = true;
+            this.lbl_MaxWind.Location = new System.Drawing.Point(13, 81);
+            this.lbl_MaxWind.Name = "lbl_MaxWind";
+            this.lbl_MaxWind.Size = new System.Drawing.Size(175, 13);
+            this.lbl_MaxWind.TabIndex = 5;
+            this.lbl_MaxWind.Text = "Wind Speed to enable autorotation:\r\n";
+            // 
+            // txt_MaxWind
+            // 
+            this.txt_MaxWind.Location = new System.Drawing.Point(338, 78);
+            this.txt_MaxWind.Name = "txt_MaxWind";
+            this.txt_MaxWind.Size = new System.Drawing.Size(95, 20);
+            this.txt_MaxWind.TabIndex = 6;
+            // 
+            // btt_ComPortConfig
+            // 
+            this.btt_ComPortConfig.Location = new System.Drawing.Point(16, 112);
+            this.btt_ComPortConfig.Name = "btt_ComPortConfig";
+            this.btt_ComPortConfig.Size = new System.Drawing.Size(97, 39);
+            this.btt_ComPortConfig.TabIndex = 7;
+            this.btt_ComPortConfig.Text = "Configure Com Port";
+            this.btt_ComPortConfig.UseVisualStyleBackColor = true;
+            this.btt_ComPortConfig.Click += new System.EventHandler(this.btt_ComPortConfig_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 163);
+            this.Controls.Add(this.btt_ComPortConfig);
+            this.Controls.Add(this.txt_MaxWind);
+            this.Controls.Add(this.lbl_MaxWind);
             this.Controls.Add(this.btt_startStop);
             this.Controls.Add(this.txt_Interval);
             this.Controls.Add(this.lbl_interval);
@@ -102,6 +134,9 @@
         private System.Windows.Forms.Label lbl_interval;
         private System.Windows.Forms.TextBox txt_Interval;
         private System.Windows.Forms.Button btt_startStop;
+        private System.Windows.Forms.Label lbl_MaxWind;
+        private System.Windows.Forms.TextBox txt_MaxWind;
+        private System.Windows.Forms.Button btt_ComPortConfig;
     }
 }
 
